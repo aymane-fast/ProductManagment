@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/ListProduct',[ProductController::class ,'ProductListV'] );
+Route::get('/ListProduct',[ProductController::class ,'ProductList'] );
 Route::post('Add',[ProductController::class,'ProductAdd']);
 Route::get('/AddProduct',[ProductController::class ,'ProductAddV'] );

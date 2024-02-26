@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    function ProductListV(){
-        return view('ListProduct');
+    function ProductList(){
+        $products = ProductModel::all();
+        return view(('ListProduct') , compact('products'));
+        
     }
     function ProductAddV(){
         return view('AddProduct');
-    }
-    function ProductList(){
-        
     }
     function ProductAdd(Request $request){
         $data = $request->all();

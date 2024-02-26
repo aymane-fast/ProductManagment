@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>List de produit </title>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>name </th>
+            <th>price</th>
+            <th>categorie</th>
+        </tr>
 
-    <ul>
-        <li>produit lewel aykoun hnaya </li>
-        <li>produit tani aykoun hnaya </li>
-        <li>produit talet aykoun hnaya </li>
-        <li>produit rabe3 aykoun hnaya </li>
-        <li>produit lkhameds aykoun hnaya </li>
-    </ul>
+    @foreach ($products as $product)
+    <tr>
+        <td>{{$product->id}}</td>
+        <td>{{$product->name}}</td>
+        <td>{{$product->price}}</td>
+        <td>{{$product->categorie}}</td>
+
+    </tr>
+    @endforeach
+
+    </table>
 </head>
 <body>
     

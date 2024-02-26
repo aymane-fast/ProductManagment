@@ -7,9 +7,11 @@
     <title>Home</title>
 </head>
 <body>
+    <h1>welcome to our product managment app </h1>
+    <h2>shoos what you want to do </h2>
     <ul>
-        <li><a href="/AddProduct">Ajouter produit</a></li>
-        <li><a href="/ListProduct">List produit</a></li>
+        <li><a href="/AddProduct">add product</a></li>
+        <li><a href="/ListProduct">show products</a></li>
     </ul>
 </body>
 </html>
