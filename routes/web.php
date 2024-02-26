@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/ListProduct',[ProductController::class ,'ProductList'] );
-Route::post('Add',[ProductController::class,'ProductAdd']);
+Route::post('/Add',[ProductController::class,'ProductAdd']);
+Route::get('/Delete/{id}',[ProductController::class,'ProductDelete']);
 Route::get('/AddProduct',[ProductController::class ,'ProductAddV'] );

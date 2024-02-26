@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +12,28 @@
             <th>name </th>
             <th>price</th>
             <th>categorie</th>
+            <th>delete</th>
         </tr>
 
-    @foreach ($products as $product)
-    <tr>
-        <td>{{$product->id}}</td>
-        <td>{{$product->name}}</td>
-        <td>{{$product->price}}</td>
-        <td>{{$product->categorie}}</td>
+        @foreach ($products as $product)
+            <tr>
+                <td>{{ $product->id }}</td>
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->price }}</td>
+                <td>{{ $product->categorie }}</td>
+                <td><a href="/Delete/{{ $product->id }}">
+                        delete
+                    </a>
+                </td>
 
-    </tr>
-    @endforeach
-
+            </tr>
+        @endforeach
     </table>
+         <h3><a href="/">back to home</a></h3>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

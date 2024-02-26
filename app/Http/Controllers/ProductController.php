@@ -20,7 +20,8 @@ class ProductController extends Controller
         ProductModel::create($data);
         return redirect('/');
     }
-    function ProductDelete(){
-
+    function ProductDelete($id){
+        ProductModel::destroy($id);
+        return redirect('ListProduct');
     }
 }
