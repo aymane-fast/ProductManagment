@@ -13,6 +13,7 @@
             <th>price</th>
             <th>categorie</th>
             <th>delete</th>
+            <th>update</th>
         </tr>
 
         @foreach ($products as $product)
@@ -21,8 +22,12 @@
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->price }}</td>
                 <td>{{ $product->categorie }}</td>
-                <td><a href="/Delete/{{ $product->id }}">
+                <td><a href="/Delete/{{ $product->id }} "onclick="return confirm('Are you sure?')">
                         delete
+                    </a>
+                </td>
+                <td><a href="/Update/{{ $product->id }}">
+                        update
                     </a>
                 </td>
 

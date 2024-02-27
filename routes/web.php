@@ -21,4 +21,6 @@ Route::get('/', function () {
 Route::get('/ListProduct',[ProductController::class ,'ProductList'] );
 Route::post('/Add',[ProductController::class,'ProductAdd']);
 Route::get('/Delete/{id}',[ProductController::class,'ProductDelete']);
+Route::get('/Update/{id}',[ProductController::class,'ProductUpdateRedirect']);
+Route::get('/Edit/{id}',[ProductController::class,'EditProduct']);
 Route::get('/AddProduct',[ProductController::class ,'ProductAddV'] );
